@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    transition: background-image 0.5s ease-in-out;
+    background-color: #254d9c;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,auto);
+    justify-content:start ;
+    grid-gap : 4px;
+
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 3rem;
+    border: 3px solid white;
+    cursor: pointer;
+    color: white;
+}

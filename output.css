@@ -592,38 +592,37 @@ video {
   width: auto;
 }
 
-.ripple {
-  animation: ripples 1s linear;
-  animation-delay: 0.5s;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-@keyframes ripples {
-  0% {
-    outline-offset: 0rem;
-  }
-
-  99% {
-    outline-offset: 4rem;
-  }
-
-  100% {
-    outline:none;
-  }
+body {
+  height: 100vh;
+  width: 100vw;
+  transition: background-image 0.5s ease-in-out;
+  background-color: #254d9c;
+  text-align: center;
+  padding-top: 5vh;
 }
 
-.pop {
-  animation: pops 0.5s linear 0s  forwards;
-  animation-iteration-count: 1;
+.container {
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  grid-template-rows: repeat(3,auto);
+  justify-content:start ;
+  grid-gap : 4px;
 }
 
-@keyframes pops {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+.cell {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 3rem;
+  border: 3px solid white;
+  cursor: pointer;
+  color: white;
 }
 
 @media (prefers-color-scheme: dark) {
